@@ -4,16 +4,14 @@ import { About } from "./components/About";
 import { PostsCarousel } from "./components/PostsCarousel";
 import { Logo } from "./components/Logo";
 import { Gallery } from "./components/Gallery";
-// import Head from "next/head";
+import { Contact } from "./components/Contact";
+import { supabase } from '@/api/supabase';
+
 
 export default function Home() {
   return (
     <>
-    {/* <Head>
-      <title>Adriana Frusciante</title>
-      <meta name="description" content="Adriana Frusciante - Celebrante de casamentos" />
-      <link rel="icon" href="/favicon.ico" />
-    </Head> */}
+
       <section className="w-full">
         <Navbar />
         <div className="flex justify-center mt-36 mb-36">
@@ -27,7 +25,11 @@ export default function Home() {
       {/* Posts */}
       <PostsCarousel />
 
+      {/* Galeria */}
       <Gallery />
+
+      {/* Contato */}
+      <Contact />
     </>
   );
 }

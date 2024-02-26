@@ -20,26 +20,28 @@ const post = [
 
 export function PostsCarousel() {
   return (
-    <Section.Root variant="middle">
-      <Carousel>
-        <CarouselContent>
-          { post.map(post => {
-            return (
-            <CarouselItem key={post.id}>
-              <Section.Title > {post.title} </Section.Title>
-              <div className="lg:grid lg:grid-cols-3 lg:mt-4 lg:gap-4 space-y-4">
-                  <p className="text-justify indent-8">
-                      {post.content}
-                  </p>
-                  <img src={post.images[0]}/>
-                  <img src={post.images[1]}/>
-              </div>
-            </CarouselItem>)
-          })}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </Section.Root>
+    <div id="posts">
+      <Section.Root variant="middle">
+        <Carousel>
+          <CarouselContent>
+            { post.map(post => {
+              return (
+                <CarouselItem key={post.id}>
+                <Section.Title > {post.title} </Section.Title>
+                <div className="lg:grid lg:grid-cols-3 lg:mt-4 lg:gap-4 space-y-4">
+                    <p className="text-justify indent-8">
+                        {post.content}
+                    </p>
+                    <img src={post.images[0]}/>
+                    <img src={post.images[1]}/>
+                </div>
+              </CarouselItem>)
+            })}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </Section.Root>
+    </div>
   );
 }

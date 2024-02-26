@@ -5,7 +5,7 @@ import { Section } from "./Section";
 
 export function About() {
   return (
-    <>
+    <div id="about">
       <Section.Root variant="top">
         <Section.Title>Sobre a celebrante:</Section.Title>
         {/* Sobre */}
@@ -41,6 +41,6 @@ export function About() {
           <Image src={foto1} className="" alt={"Foto de adriana em uma celebração"} />
         </div>
       </Section.Root>
-    </>
+    </div>
   );
 }
